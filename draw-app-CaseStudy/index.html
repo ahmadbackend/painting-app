@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8"> 
+ <script src="lib/p5.min.js"></script> 
+  <script src="lib/p5.dom.js"></script> 
+
+
+    <script src="sketch.js"></script>
+ 
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="colourPalette.js"></script>
+    <script src="helperFunctions.js"></script>
+    <script src="sprayCan.js"></script>
+    <script src="freehandTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="eraser.js"></script>
+    <script src="image.js"></script>
+    <script src="star.js"></script> 
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+      <div class="wrapper">
+      <div class="box header">My Drawing App
+         <!-- to wrap tools in header area --> 
+            
+        <button id="clearButton">Clear</button>
+        <button id="font">Fontsize</button>
+        <button id="saveImageButton">Save Image</button>
+         <!--<button id="opacity">colour opacity</button> -->
+          <span id="imageTools" class="hide" > 
+        <input type="file" id="myFileInput" name="upload image" display="none"> 
+         
+         <button id="drag"  display="none">Drag image</button>
+         <button id="crop">Crop image</button>
+         <button id="imgfilter" >filters</button>
+             
+              <ul id="filters" class="hide">
+        <li>grayness
+       <input type="range" min="0" max="100"  class="slider"  id="grayscalet" value="50" > 
+                  </li> 
+                  <li class="slider">sepiat
+                      <input type="range" min="0" max="100" value="0"   id="sepiat" >  
+                      
+                  </li>
+                  <li >brightnes
+                      <input type="range" min="0" max="100"  id="brightnesst" class="slider"value="0"  >  
+                      </li>
+                   <li >contrasts
+                       <input type="range"  id="contrastt" class="slider" min="0" max="100" value="0"  >   
+                  </li >
+                   <li >rotates
+                       <input type="range" id="rotatet" min="0" max="100" value="0"  > 
+                  </li>
+                   <li >inverts
+                        <input type="range" min="0" max="100" value="0"  class="slider"
+                               id="invertt"> 
+                  </li>
+                   
+              
+              </ul>
+            
+          <div id="imageloader"> </div> 
+          </span>                           <!-- so buggy need to be fixed span div headache --> 
+        
+            <!--  different filters  -->
+              
+        </div>
+
+      <div class="box" id="sidebar"></div>
+      <div id="content">
+       <img src=" " id="inserted" draggable="true"  
+             class="hide" >
+          
+          <p id="alert"></p>
+        </div>
+      <div class="box colourPalette"></div>
+          <div id="background">adjust background color</div>
+      <div class="box options"></div>
+	</div>
+     <script>
+    
+      
+      </script>
+  </body>
+</html>
